@@ -7,70 +7,108 @@
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f7f7f7;
+            background: linear-gradient(135deg, #e0e7ff 0%, #f7f7f7 100%);
             margin: 0;
             padding: 0;
+            min-height: 100vh;
         }
         .container {
-            max-width: 500px;
-            margin: 40px auto;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-            padding: 32px 24px 24px 24px;
+            max-width: 420px;
+            margin: 48px auto 0 auto;
+            background: rgba(255,255,255,0.98);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(30,41,59,0.13);
+            padding: 36px 24px 28px 24px;
             text-align: center;
+            position: relative;
+        }
+        .shop-logo {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 16px;
+            border: 3px solid #1a237e22;
+            background: #fff;
+            box-shadow: 0 2px 8px #1a237e11;
         }
         h1 {
             color: #1a237e;
-            margin-bottom: 12px;
-            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-size: 2.3em;
             letter-spacing: 1px;
+            font-weight: 700;
         }
         .address {
             color: #333;
-            font-size: 1.1em;
-            margin-bottom: 24px;
+            font-size: 1.13em;
+            margin-bottom: 22px;
+            line-height: 1.6;
+            background: #e3e8ff;
+            border-radius: 8px;
+            padding: 10px 0;
+            display: inline-block;
+            width: 90%;
         }
         .map {
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            box-shadow: 0 2px 12px rgba(30,41,59,0.09);
+            margin-bottom: 18px;
+        }
+        .whatsapp-btn {
+            position: fixed;
+            right: 24px;
+            bottom: 32px;
+            z-index: 100;
+            background: linear-gradient(135deg, #25d366 60%, #128c7e 100%);
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            padding: 0 22px 0 16px;
+            height: 54px;
+            display: flex;
+            align-items: center;
+            font-size: 1.15em;
+            font-weight: 600;
+            box-shadow: 0 4px 18px #25d36644;
+            cursor: pointer;
+            transition: box-shadow 0.2s, transform 0.2s;
+            text-decoration: none;
+        }
+        .whatsapp-btn:hover {
+            box-shadow: 0 8px 32px #25d36666;
+            transform: translateY(-2px) scale(1.04);
+        }
+        .wa-icon {
+            width: 28px;
+            height: 28px;
+            margin-right: 10px;
+        }
+        @media (max-width: 600px) {
+            .container { margin: 18px 0 0 0; padding: 18px 4vw 18px 4vw; }
+            .address { width: 100%; font-size: 1em; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80" alt="Mobile Shop Banner" style="width:100%; border-radius:10px; margin-bottom:20px; max-height:180px; object-fit:cover;">
+        <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Shop Logo" class="shop-logo">
         <h1>RJ 13 LAMINATION ZONE</h1>
         <div class="address">
-            नजदीक मन्नत गर्ल पीजी, H Block<br>
-            Chugh Hospital Road srigangangar
+            <span style="font-size:1.2em;">📍</span> नजदीक मन्नत गर्ल पीजी, H Block<br>
+            Chugh Hospital Road, Srigangangar
         </div>
         <div class="map">
             <iframe
                 src="https://www.google.com/maps?q=RJ+13+Lamination+Zone,+H+block,+sgnr&output=embed"
-                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                width="100%" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
-        <h2 style="margin-top:32px; color:#1a237e;">Mobile Showcase</h2>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(120px,1fr)); gap:18px; margin-top:18px;">
-            <div style="background:#f1f3f6; border-radius:8px; padding:10px;">
-                <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-max-blue-select?wid=940&hei=1112&fmt=png-alpha&.v=1645552346275" alt="iPhone 13 Pro" style="width:100%; border-radius:6px; background:#fff;">
-                <div style="margin-top:8px; font-weight:500;">iPhone 13 Pro</div>
-            </div>
-            <div style="background:#f1f3f6; border-radius:8px; padding:10px;">
-                <img src="https://images.samsung.com/is/image/samsung/p6pim/in/sm-g991bzadeua/gallery/in-galaxy-s21-5g-g991-371133-sm-g991bzadeua-368472601?$650_519_PNG$" alt="Samsung Galaxy S21" style="width:100%; border-radius:6px; background:#fff;">
-                <div style="margin-top:8px; font-weight:500;">Samsung Galaxy S21</div>
-            </div>
-            <div style="background:#f1f3f6; border-radius:8px; padding:10px;">
-                <img src="https://image01.oneplus.net/ebp/202103/26/1-m00-1c-0c-rb8bwl-fv6aafqkaaaadqiaaakqkqf4j6g303_840_840.png" alt="OnePlus 9" style="width:100%; border-radius:6px; background:#fff;">
-                <div style="margin-top:8px; font-weight:500;">OnePlus 9</div>
-            </div>
-            <div style="background:#f1f3f6; border-radius:8px; padding:10px;">
-                <img src="https://i01.appmifile.com/webfile/globalimg/products/pc/mi-11/specs-header.png" alt="Xiaomi Mi 11" style="width:100%; border-radius:6px; background:#fff;">
-                <div style="margin-top:8px; font-weight:500;">Xiaomi Mi 11</div>
-            </div>
-        </div>
     </div>
+    <a class="whatsapp-btn" href="https://wa.me/917611021176" target="_blank" rel="noopener">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="wa-icon" alt="WhatsApp">
+        WhatsApp Us
+    </a>
 </body>
 </html>
